@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문의 - 우리 동아리</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📮 암호 블록체인 동아리</h1>
+    <nav>
+      <a href="index.html">홈</a> |
+      <a href="about.html">소개</a> |
+      <a href="activity.html">활동</a> |
+      <a href="contact.html">문의</a>
+    </nav>
+  </header>
+  <main>
+    <<h2>가입 문의</h2>
+    <form id="contactForm">
+        <label>이름: <input type="text" name="name" required></label><br><br>
+        <label>이메일: <input type="email" name="email" required></label><br><br>
+        <label>가입 동기:<br>
+            <textarea name="message" rows="4" cols="40" required></textarea>
+        </label><br><br>
+        <button type="submit">보내기</button>
+    </form>
+  </main>
+</body>
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // 새로고침 막기
+    alert("문의가 정상적으로 접수되었습니다!\n감사합니다 😄");
+    form.reset(); // 입력 내용 지우기
+  });
+</script>
+
+</html>
